@@ -1,9 +1,23 @@
 import * as React from 'react';
 import DarkModeToggle from '../components/dark-mode-toggle/DarkModeToggle';
+import HeroSection from '../components/hero/Hero';
 
+const heroStyles = {
+  // position: relative;
+  // height: 100%;
+  // min-height: 100vh;
+  // overflow: hidden;
+  // display: flex;
+  // -webkit-box-align: center;
+  // align-items: center;
+  // -webkit-box-pack: justify;
+  // justify-content: space-between;
+  // flex-direction: column;
+};
 // styles
+
 const pageStyles = {
-  padding: 96,
+  // padding: 96,
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
 };
 const headingStyles = {
@@ -130,13 +144,13 @@ function IndexPage() {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
-      <DarkModeToggle />
-      <h1 style={headingStyles}>
+      {/* <h1 style={headingStyles}>
         Congratulations
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
         🎉🎉🎉
-      </h1>
+      </h1> */}
+      <HeroSection />
       <p style={paragraphStyles}>
         Edit
         {' '}

@@ -1,0 +1,74 @@
+section {
+  @apply relative min-h-screen h-full;
+  @apply overflow-hidden;
+  @apply flex items-center justify-between flex-col
+}
+
+/** MAIN SECTIONS **/
+
+.main-container {
+  @apply w-10/12 mx-auto;
+}
+
+.main-container-section {
+  @apply w-full;
+}
+
+.content-wrapper {
+  @apply lg:w-10/12 flex flex-col content-center;
+  @apply items-center lg:items-start;
+}
+
+/** PREFIX TAGLINE **/
+
+.prefix-tagline {
+  @apply text-lg relative font-semibold;
+  padding-left: 70px;
+}
+
+body.light-mode .prefix-tagline {
+  @apply text-black;
+}
+
+body.dark-mode .prefix-tagline {
+  @apply text-lg relative text-gray-400;
+}
+
+.prefix-tagline:before {
+  @apply block absolute border-t-2;
+  content: "";
+  width: 48px;
+  left: 0px;
+  top: 12px;
+}
+
+body.light-mode .prefix-tagline:before {
+  @apply border-gray-800;
+}
+
+body.dark-mode .prefix-tagline:before {
+  @apply border-gray-100;
+}
+
+/** HERO HEADING & TAGLINES **/
+
+h2 {
+  @apply text-3xl lg:text-5xl font-bold mt-8;
+  @apply text-center lg:text-left;
+}
+
+.tagline-create {
+  @apply text-cyan-400;
+}
+
+.tagline-inspire {
+  @apply text-orange-500;
+}
+
+.tagline-bridge {
+  @apply text-green-500;
+}
+
+.call-to-action {
+  @apply text-center text-lg font-bold mt-24;
+}

@@ -1,0 +1,21 @@
+body.light-mode .logo-content {
+  @apply bg-black text-white;
+}
+
+body.dark-mode .logo-content {
+  @apply bg-white text-gray-900;
+}
+
+.logo-container {
+  @apply pt-10 text-center;
+}
+
+.logo-content {
+  @apply block text-center font-extrabold text-xl rounded;
+  @apply py-2 w-16 align-middle mb-0;
+  transition: 1s all;
+}
+
+.logo-content:hover {
+  @apply rounded-lg;
+}
