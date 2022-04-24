@@ -1,8 +1,8 @@
 import * as React from 'react';
+import DarkModeToggle from '../components/dark-mode-toggle/DarkModeToggle';
 
 // styles
 const pageStyles = {
-  color: '#232129',
   padding: 96,
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
 };
@@ -49,7 +49,7 @@ const docLinkStyle = {
 };
 
 const descriptionStyle = {
-  color: '#232129',
+  // color: '#232129',
   fontSize: 14,
   marginTop: 10,
   marginBottom: 0,
@@ -130,6 +130,7 @@ function IndexPage() {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
+      <DarkModeToggle />
       <h1 style={headingStyles}>
         Congratulations
         <br />

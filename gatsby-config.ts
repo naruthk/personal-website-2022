@@ -34,7 +34,15 @@ const config: GatsbyConfig = {
       path: './src/pages/',
     },
     __key: 'pages',
-  }, 'gatsby-plugin-postcss'],
+  }, 'gatsby-plugin-postcss', {
+    resolve: 'gatsby-plugin-use-dark-mode',
+    options: {
+      classNameDark: 'dark-mode',
+      classNameLight: 'light-mode',
+      storageKey: 'darkMode',
+      minify: true,
+    },
+  }],
 };
 
 export default config;
