@@ -1,36 +1,40 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby';
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `personal-website-2022`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: 'personal-website-2022',
+    siteUrl: 'https://www.naruth.dev',
   },
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "2UQ9tk0zxlX-WG4d0fXaiA4_QXHYdL-F_bD030gZefc",
-      "spaceId": ""
-    }
-  }, "gatsby-plugin-styled-components", {
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      spaceId: process.env.CONTENTFUL_SPACE_ID,
+    },
+  }, 'gatsby-plugin-styled-components', {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
-      "trackingId": "UA-125314045-1"
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+      trackingId: process.env.GOOGLE_ANALYTIC_TRACKING_ID,
+    },
+  }, 'gatsby-plugin-image', 'gatsby-plugin-react-helmet', 'gatsby-plugin-sitemap', 'gatsby-plugin-mdx', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp', {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "images",
-      "path": "./src/images/"
+      name: 'images',
+      path: './src/images/',
     },
-    __key: "images"
+    __key: 'images',
   }, {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      name: 'pages',
+      path: './src/pages/',
     },
-    __key: "pages"
-  }]
+    __key: 'pages',
+  }],
 };
 
 export default config;
