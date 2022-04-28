@@ -1,17 +1,16 @@
+import { MoonIcon, SunIcon } from '@heroicons/react/solid';
 import React from 'react';
 import useDarkMode from 'use-dark-mode';
+
+import './DarkModeToggle.css';
 
 function DarkModeToggle() {
   const darkMode = useDarkMode(false);
 
   return (
-    <div>
-      <button type="button" onClick={darkMode.disable}>
-        ☀
-      </button>
-      <input type="checkbox" checked={darkMode.value} onChange={darkMode.toggle} />
-      <button type="button" onClick={darkMode.enable}>
-        ☾
+    <div className="dark-mode-toggle-form">
+      <button type="button" onClick={darkMode.value ? darkMode.disable : darkMode.enable}>
+        {darkMode.value ? <SunIcon /> : <MoonIcon />}
       </button>
     </div>
   );

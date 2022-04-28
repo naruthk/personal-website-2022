@@ -1,0 +1,20 @@
+section.home-section {
+  @apply relative min-h-screen h-full;
+  @apply overflow-hidden;
+  @apply flex items-center justify-between flex-col;
+}
+
+/** MAIN SECTIONS **/
+
+.main-container {
+  @apply w-10/12 mx-auto;
+}
+
+.main-container-section {
+  @apply w-full;
+}
+
+.content-wrapper {
+  @apply lg:w-10/12 flex flex-col content-center;
+  @apply items-center lg:items-start;
+}

@@ -7,7 +7,7 @@ body.dark-mode .logo-content {
 }
 
 .logo-container {
-  @apply pt-10 text-center;
+  @apply pt-6 text-center;
 }
 
 .logo-content {

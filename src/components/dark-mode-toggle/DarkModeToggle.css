@@ -1,0 +1,29 @@
+.dark-mode-toggle-form {
+  @apply absolute right-6 top-6;
+  @apply flex;
+}
+
+.dark-mode-toggle-form svg {
+  @apply block h-8;
+}
+
+.dark-mode-toggle-form button {
+  @apply border-2 border-solid rounded p-1;
+  @apply transition-all;
+}
+
+body.light-mode .dark-mode-toggle-form button {
+  @apply border-gray-500;
+}
+
+body.dark-mode .dark-mode-toggle-form button {
+  @apply border-gray-500;
+}
+
+body.dark-mode .dark-mode-toggle-form svg {
+  @apply text-gray-500;
+}
+
+body.dark-mode .dark-mode-toggle-form svg:hover {
+  @apply text-gray-200;
+}

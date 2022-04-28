@@ -1,40 +1,34 @@
-import { Link } from 'gatsby';
 import * as React from 'react';
-import LogoSection from '../logo/Logo';
+import { ArrowRightIcon } from '@heroicons/react/solid';
 
 import './Hero.css';
 
 function HeroSection() {
   return (
     <section>
-      <LogoSection />
-      <div className="main-container">
-        <div className="main-container-section">
-          <div className="content-wrapper">
-            <p><span className="prefix-tagline">Hello, I&rsquo;m Sam</span></p>
+      <div>
+        <p><span className="prefix-tagline">Hello, I&rsquo;m Sam</span></p>
 
-            <h2>
-              I aim to
-              {' '}
-              <span className="tagline-create">create powerful</span>
-              {' '}
-              products,
-              {' '}
-              <span className="tagline-inspire">inspire people </span>
-              {' '}
-              through the use of technology, and
-              {' '}
-              <span className="tagline-bridge">bridge the gap </span>
-              between the world of technology and people.
-            </h2>
+        <h2>
+          Creating
+          {' '}
+          <span className="tagline-1">full-stack web apps</span>
+          {' '}
+          products, blogging about
+          {' '}
+          <span className="tagline-2">technologies and trends</span>
+          {' '}
+          and
+          {' '}
+          <span className="tagline-3">bridging the gap between technology and people</span>
+        </h2>
 
-            <div className="call-to-action">View LinkedIn profile</div>
-
-          </div>
+        <div className="call-to-action">
+          <p>View LinkedIn profile</p>
+          <ArrowRightIcon className="call-to-action__icon" />
         </div>
-      </div>
 
-      <div>Footer</div>
+      </div>
     </section>
   );
 }

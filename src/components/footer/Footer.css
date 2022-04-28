@@ -1,0 +1,33 @@
+footer.footer-section {
+  @apply w-screen;
+  @apply pb-4 text-gray-300 text-sm;
+}
+
+.footer-section__content {
+  @apply text-center;
+}
+
+.footer-section__content-links {
+  @apply flex flex-row mb-4 justify-center;
+}
+
+.footer-section__content-links svg {
+  @apply mx-2 h-10 transition-all block;
+  @apply p-3 rounded-full;
+}
+
+body.light-mode .footer-section__content-links svg {
+  @apply text-gray-500 bg-gray-100 transition-all;
+}
+
+body.light-mode .footer-section__content-links svg:hover {
+  @apply text-gray-900;
+}
+
+body.dark-mode .footer-section__content-links svg {
+  @apply text-gray-400 bg-gray-800;
+}
+
+body.dark-mode .footer-section__content-links svg:hover {
+  @apply text-gray-100;
+}
